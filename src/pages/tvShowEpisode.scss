@@ -1,0 +1,57 @@
+@import "../variables";
+
+.tv_show_episode-wrapper {
+  padding: 20px 12px;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  background-color: $main_color;
+}
+
+.tv_show_episode {
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 20px;
+
+  background-color: $main_accent_color;
+  color: white;
+
+  border-radius: 8px;
+
+  @media (min-width: $large_screen) {
+    flex-direction: row;
+  }
+}
+
+.tv_show_episode__nav {
+  margin-bottom: 12px;
+}
+
+.tv_show_episode__header {
+  padding: 4px;
+
+  @media (min-width: $large_screen) {
+    flex: 0 0 30%;
+  }
+}
+.tv_show_episode__main {
+  display: flex;
+  flex-direction: column;
+
+  margin: 24px 0px;
+
+  .main__subtitle {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  @media (min-width: $large_screen) {
+    margin: 4px;
+    flex: 1 1 auto;
+
+    .tv_show_episode__metadata {
+      flex: 1 0 auto;
+    }
+  }
+}

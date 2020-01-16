@@ -1,0 +1,25 @@
+@import "../../variables";
+
+.button-component {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 0.8em;
+
+  background-color: $accent_color;
+  color: white;
+
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+
+  margin-right: 4px;
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  &.success {
+    background-color: $accent_accent_color;
+  }
+}

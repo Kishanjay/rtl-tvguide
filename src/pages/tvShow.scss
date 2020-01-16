@@ -1,0 +1,57 @@
+@import "../variables";
+
+.tv_show {
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px 20px;
+
+    background-color: $main_color;
+    color: white;
+
+    @media (min-width: $large_screen) {
+        flex-direction: row;
+    }
+}
+
+.tv_show__header {
+    padding: 4px;
+
+    .header__title {
+        margin-top: 0px;
+        text-align: center;
+
+        color: darken($main_color, 6%);
+    }
+
+    @media (min-width: $large_screen) {
+        flex: 0 1 30%;
+    }
+}
+.tv_show__main {
+    @media (min-width: $large_screen) {
+        margin-left: 16px;
+        flex: 1 1 70%;
+    }
+}
+.tv_show__metadata {
+    display: flex;
+    flex-direction: column;
+
+    margin: 24px 0px;
+    border-bottom: 2px solid #eee;
+
+    .main__subtitle {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.tv_show__seasons {
+    margin-bottom: 16px;
+
+    .seasons__button {
+        margin: 0px 4px;
+    }
+}
+

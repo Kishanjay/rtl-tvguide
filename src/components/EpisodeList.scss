@@ -1,0 +1,13 @@
+@import "../variables";
+
+.episode_list-component {
+  display: flex;
+  overflow-x: scroll;
+
+  padding: 0px;
+  list-style-type: none;
+
+  @media (min-width: $medium_screen){
+    flex-wrap: wrap;
+  }
+}

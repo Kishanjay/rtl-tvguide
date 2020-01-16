@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assets/fonts/Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assets/fonts/Montserrat-Light.ttf') format('truetype');
+	font-weight: lighter;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assets/fonts/Montserrat-Bold.ttf') format('truetype');
+	font-weight: bold;
+}
+
+body {
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+}
+b {
+  font-weight: bold;
+}
+
+.space-between {
+	display: flex;
+	justify-content: space-between;
+}
+

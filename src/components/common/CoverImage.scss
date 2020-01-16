@@ -1,0 +1,19 @@
+.cover_image-component {
+    position: relative;
+    box-shadow: 0px 0px 15px -3px black;
+
+    .cover_image-component__avatar {
+        width: 100%;
+    }
+
+    &:after { // darkens the coverImage
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        content: " ";
+        background-color: rgba(black, 0.3);
+    }
+}
