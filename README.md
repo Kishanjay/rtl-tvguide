@@ -41,7 +41,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Deploying / Publishing
 
-Tbd.
+CI/CD with Heroku: all commits to Github master will trigger a new deploy.
+[http://powerpuffgirls.herokuapp.com/](http://powerpuffgirls.herokuapp.com/)
 
 ## Features
 
@@ -60,18 +61,20 @@ one breakpoint.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Dependencies
 The following modules have been added to get to this result:
-### yarn add node-sass
+
+#### yarn add node-sass
 For using scss within the application
-### yarn add normalize.css
+#### yarn add normalize.css
 Used as a css reset, to keep styling in sync across various browsers
-### yarn add react-redux
+#### yarn add react-redux
 To use Redux statemanagement
-### yarn add redux
+#### yarn add redux
 To use Redux statemanagement
-### yarn add react-router-dom
+#### yarn add react-router-dom
 To use a singlepage router
-### yarn add sanitize-html
+#### yarn add sanitize-html
 To safely embed unsafe code (retrieved over the network) as html on the page.
 
 ## Licensing
