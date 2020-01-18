@@ -16,7 +16,10 @@ function EpisodeListItem(props) {
   const seen = episode.id in seenEpisodes ? seenEpisodes[episode.id] : false;
 
   return (
-    <li className={`episode_list_item-component ${seen ? "seen" : ""}`}>
+    <li
+      className={`episode_list_item-component ${seen ? "seen" : ""}`}
+      key={episode.id}
+    >
       <Link
         to={`/show/${showId}/season/${seasonNumber}/episode/${episode.number}`}
       >

@@ -8,6 +8,8 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleEpisodeSeen as toggleEpisodeSeenAction } from "../store";
 
+import PageFooter from "./partials/PageFooter";
+
 import CoverImage from "../components/common/CoverImage";
 import Title from "../components/common/Title";
 import Subtitle from "../components/common/Subtitle";
@@ -101,6 +103,7 @@ class PageTvShowEpisode extends React.Component {
             />
           </main>
         </div>
+        <PageFooter />
       </div>
     );
   }

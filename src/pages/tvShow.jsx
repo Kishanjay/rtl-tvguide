@@ -5,6 +5,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import PageFooter from "./partials/PageFooter";
+
 import CoverImage from "../components/common/CoverImage";
 import Title from "../components/common/Title";
 import Subtitle from "../components/common/Subtitle";
@@ -28,7 +30,9 @@ class PageTvShow extends React.Component {
       tvShow: undefined,
       tvShowSeasons: undefined,
 
-      selectedSeason: undefined
+      selectedSeasonLoading: undefined,
+      selectedSeason: undefined,
+      selectedSeasonEpisodes: undefined
     };
 
     this.loadTvShowSeason = this.loadTvShowSeason.bind(this);
@@ -74,13 +78,19 @@ class PageTvShow extends React.Component {
   }
 
   loadTvShowSeason(season) {
+    this.setState({
+      selectedSeason: season,
+      selectedSeasonEpisodes: [],
+      selectedSeasonLoading: true
+    });
     const seasonId = season.id;
     return seasonRepository
       .listEpisodes(seasonId)
       .then(response => {
         this.setState({
           selectedSeasonEpisodes: response,
-          selectedSeason: season
+          selectedSeason: season,
+          selectedSeasonLoading: false
         });
       })
       .catch(e => {
@@ -93,8 +103,9 @@ class PageTvShow extends React.Component {
     const {
       tvShow,
       tvShowSeasons,
-      selectedSeasonEpisodes,
-      selectedSeason
+      selectedSeasonLoading,
+      selectedSeason,
+      selectedSeasonEpisodes
     } = this.state;
 
     if (!tvShow) {
@@ -144,12 +155,15 @@ class PageTvShow extends React.Component {
           {selectedSeason && (
             <section className="tv_show__episodes">
               <EpisodeList
+                loading={selectedSeasonLoading}
                 showId={showId}
                 seasonNumber={selectedSeason.number}
                 episodes={selectedSeasonEpisodes}
               />
             </section>
           )}
+
+          <PageFooter />
         </main>
       </div>
     );

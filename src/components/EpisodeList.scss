@@ -3,9 +3,12 @@
 .episode_list-component {
   display: flex;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 
   padding: 0px;
   list-style-type: none;
+
+  min-height: 200px;
 
   @media (min-width: $medium_screen){
     flex-wrap: wrap;
