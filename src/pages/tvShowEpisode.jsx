@@ -71,7 +71,11 @@ class PageTvShowEpisode extends React.Component {
 
     const seen = episode.id in seenEpisodes ? seenEpisodes[episode.id] : false;
     const coverImage = episode.image ? episode.image.original : null;
-    const airedData = `${episode.airdate} [${episode.airtime}]`;
+    let airedData = `${episode.airdate}`;
+    if (episode.airtime) {
+      airedData += ` [${episode.airtime}]`;
+    }
+
     const description = episode.summary || "<i>No description</i>";
     return (
       <div className="tv_show_episode-wrapper">

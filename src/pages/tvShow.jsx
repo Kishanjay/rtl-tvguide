@@ -114,10 +114,12 @@ class PageTvShow extends React.Component {
 
     const coverImage = tvShow.image ? tvShow.image.original : null;
     const title = tvShow.name;
-    const subtitleLeft = tvShow.genres.join(",");
-    const subtitleRight = `(${tvShow.rating.average}/10)`;
+    const subtitleLeft = tvShow.genres ? tvShow.genres.join(",") : " ";
+    const subtitleRight =
+      tvShow.rating && tvShow.rating.average
+        ? `(${tvShow.rating.average}/10)`
+        : "";
     const description = tvShow.summary;
-
     return (
       <div className="tv_show">
         <header className="tv_show__header">
